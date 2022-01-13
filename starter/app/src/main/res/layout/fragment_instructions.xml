@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="instructionsViewModel"
+            type="com.udacity.shoestore.screens.instructions.InstructionsViewModel" />
+    </data>
+
+    <!-- Could be LinearLayout with just vertical orientation of three text boxes and margins defined,
+    decided on ConstraintLayout to allow spacing of items on screen to be adaptive to the screen size/orientation -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/instruction_add_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/instruction_add_shoes_that_you_own"
+            app:layout_constraintBottom_toTopOf="@+id/instruction_view_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/instructionTextStyle" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/instruction_view_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/instruction_view_your_inventory"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/instruction_remove_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/instruction_add_text"
+            style="@style/instructionTextStyle" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/instruction_remove_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/instruction_remove_shoes_when_your_done"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/instruction_view_text"
+            style="@style/instructionTextStyle" />
+
+        <Button
+            android:id="@+id/instruction_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:onClick="@{() -> instructionsViewModel.onNextClicked()}"
+            android:text="@string/instruction_next"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

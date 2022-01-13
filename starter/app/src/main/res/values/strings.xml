@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">ShoeStore</string>
+    <string name="label_login_button">Login</string>
+    <string name="cd_login_screen">App icon image</string>
+    <string name="login_email_hint">Enter email address</string>
+    <string name="login_password_hint">Enter password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="welcome">Welcome to Shoe Store!</string>
+    <string name="welcome_continue">Continue</string>
+    <string name="instruction_next">Next</string>
+    <string name="instruction_view_your_inventory">- View your inventory</string>
+    <string name="instruction_add_shoes_that_you_own">- Add shoes that you own</string>
+    <string name="instruction_remove_shoes_when_your_done">- Remove shoes when your done</string>
+    <string name="instruction_finish">Finish</string>
+    <string name="menu_logout">Logout</string>
+    <string name="list_add_shoes_content_desc">Add shoes</string>
+    <string name="detail_size_hint">Size</string>
+    <string name="detail_shoe_name_hint">Shoe name</string>
+    <string name="detail_company_hint">Shoe company</string>
+    <string name="detail_description_hint">Shoe description</string>
+    <string name="details_images_links_label">Add links to images</string>
+    <string name="detail_save_shoe_content_desc">Save shoe</string>
+    <string name="view_size_label">Size: %1$s</string>
 </resources>
